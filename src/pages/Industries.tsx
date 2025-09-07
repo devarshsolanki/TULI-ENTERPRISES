@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import cycleParts from '@/assets/cycle-parts.jpg';
 import Call from '../components/CallButton'; // import the Call component
 import Whatsapp from '@/components/Whatsapp'; // import the WhatsApp component
+import { Link } from "react-router-dom";
+
 
 const Industries = () => {
   const industries = [
@@ -237,23 +239,30 @@ const Industries = () => {
               We work with companies across many sectors. Contact us to discuss how our 
               fastener solutions can meet your specific industry requirements.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                onClick={() => window.location.href = '/contact'}
-                className="bg-industrial-blue hover:bg-industrial-blue/90 text-white px-8 py-3 text-lg shadow-glow hover:shadow-lg transition-all duration-300"
-              >
-                Discuss Your Requirements
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => window.location.href = '/products'}
-                className="border-metallic-silver text-foreground hover:bg-muted px-8 py-3 text-lg transition-all duration-300"
-              >
-                View All Products
-              </Button>
-            </div>
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  {/* Contact Page Button */}
+  <Button
+    asChild
+    size="lg"
+    className="bg-industrial-blue hover:bg-industrial-blue/90 text-white px-8 py-3 text-lg shadow-glow hover:shadow-lg transition-all duration-300"
+  >
+    <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+      Discuss Your Requirements
+    </Link>
+  </Button>
+
+  {/* Products Page Button */}
+  <Button
+    asChild
+    variant="outline"
+    size="lg"
+    className="border-metallic-silver text-foreground hover:bg-muted px-8 py-3 text-lg transition-all duration-300"
+  >
+    <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+      View All Products
+    </Link>
+  </Button>
+</div>
           </motion.div>
         </div>
       </section>

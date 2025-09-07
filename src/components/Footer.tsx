@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wrench, Phone, Mail, MapPin, Facebook, Twitter, Linkedin,MessageCircle} from 'lucide-react';
+import { Wrench, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, MessageCircle } from 'lucide-react';
 import logo from '../assets/logo.jpg'
 
 const Footer = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="#" className="text-metallic-silver hover:text-industrial-blue transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#"  className="text-metallic-silver hover:text-industrial-blue transition-colors">
+              <a href="#" className="text-metallic-silver hover:text-industrial-blue transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
               <a href="#" className="text-metallic-silver hover:text-industrial-blue transition-colors">
@@ -42,11 +42,51 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-metallic-silver hover:text-industrial-blue transition-colors">About Us</Link></li>
-              <li><Link to="/products" className="text-metallic-silver hover:text-industrial-blue transition-colors">Products</Link></li>
-              <li><Link to="/industries" className="text-metallic-silver hover:text-industrial-blue transition-colors">Industries</Link></li>
-              <li><Link to="/why-choose-us" className="text-metallic-silver hover:text-industrial-blue transition-colors">Why Choose Us</Link></li>
-              <li><Link to="/contact" className="text-metallic-silver hover:text-industrial-blue transition-colors">Contact</Link></li>
+              <li>
+                <Link
+                  to="/about"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-metallic-silver hover:text-industrial-blue transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-metallic-silver hover:text-industrial-blue transition-colors"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/industries"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-metallic-silver hover:text-industrial-blue transition-colors"
+                >
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/why-choose-us"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-metallic-silver hover:text-industrial-blue transition-colors"
+                >
+                  Why Choose Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="text-metallic-silver hover:text-industrial-blue transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -232,13 +233,13 @@ const Products = () => {
                       </div> */}
                     </div>
 
-                    <Button className="w-full bg-industrial-blue hover:bg-industrial-blue/90 text-white group-hover:shadow-glow transition-all duration-300" onClick={() => {
-                      window.location.href = '/contact';
-                      setTimeout(() => {
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }, 100); // delay to ensure navigation finishes
-                    }}>
-                      Request Quote
+                    <Button
+                      asChild
+                      className="w-full bg-industrial-blue hover:bg-industrial-blue/90 text-white group-hover:shadow-glow transition-all duration-300"
+                    >
+                      <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        Request Quote
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -274,18 +275,26 @@ const Products = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 industrial-heading">
               Need Custom Solutions?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 px-2 md:max-w-3xl mx-auto text-justify md:text-center">
               Can't find exactly what you're looking for? Our engineering team specializes in
               creating custom fastener solutions tailored to your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {/* Contact Button */}
               <Button
+                asChild
                 size="lg"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="bg-industrial-blue hover:bg-industrial-blue/90 text-white px-8 py-3 text-lg shadow-glow hover:shadow-lg transition-all duration-300"
               >
-                <a href="/contact">Contact Engineering Team</a>
+                <Link
+                  to="/contact"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                >
+                  Contact Engineering Team
+                </Link>
               </Button>
+
+              {/* Download Catalog */}
               <a href={Brochure} download className="inline-block">
                 <Button
                   variant="outline"
@@ -300,9 +309,9 @@ const Products = () => {
         </div>
       </section>
 
-        {/* Call and WhatsApp Buttons */}
-           <Call/>
-           <Whatsapp />
+      {/* Call and WhatsApp Buttons */}
+      <Call />
+      <Whatsapp />
     </div>
   );
 };

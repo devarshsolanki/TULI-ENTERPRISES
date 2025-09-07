@@ -17,7 +17,7 @@ const Index = () => {
   const stats = [
     { label: 'Bolts Served', value: '25+ Crore', icon: Target },
     { label: 'Years of Excellence', value: 'Since 1986', icon: Clock },
-    { label: 'Industries Served', value: 'Multi-Industry', icon: Users },
+    { label: 'Across Industries', value: 'Diversified', icon: Users },
     { label: 'Quality Assured', value: '100%', icon: Award },
   ];
 
@@ -81,7 +81,7 @@ const Index = () => {
             alt="Industrial Fasteners Manufacturing"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50"/>
         </div>
 
         {/* Hero Content */}
@@ -89,7 +89,7 @@ const Index = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+          className="relative z-10 max-w-7xl mx-auto pt-10 md:pt-0 px-4 sm:px-6 lg:px-8 text-center :pt-5"
         >
           <motion.h1
             variants={itemVariants}
@@ -146,8 +146,8 @@ const Index = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 + index * 0.1 }}
               >
-                <Card className="bg-charcoal/50 border-metallic-silver/20 backdrop-blur-sm shadow-metallic hover:shadow-glow transition-all duration-300 group">
-                  <CardContent className="p-6 text-center">
+                <Card className=" bg-charcoal/50 border-metallic-silver/20 backdrop-blur-sm shadow-metallic hover:shadow-glow transition-all duration-300 group">
+                  <CardContent className="p-4 md:p-6 md:w-[210px] text-center">
                     <stat.icon className="w-8 h-8 text-industrial-blue mx-auto mb-3 group-hover:scale-110 transition-transform" />
                     <div className="text-2xl font-bold text-clean-white mb-1">{stat.value}</div>
                     <div className="text-sm text-metallic-silver">{stat.label}</div>
@@ -246,38 +246,42 @@ const Index = () => {
       </section>
 
       {/* New Section: About Company */}
-      <section className="py-16 bg-gradient-to-b from-background to-background/95">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-2 gap-8 items-center"
-          >
-            <div>
-              <h2 className="text-3xl font-bold text-foreground industrial-heading mb-4">
-                About Tuli Enterprise
-              </h2>
-              <p className="text-base text-muted-foreground mb-4 leading-relaxed text-justify">
+     <section className="bg-gradient-to-b from-background to-background/95 py-10 ">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="grid md:grid-cols-2 gap-8 items-center"
+    >
+      {/* Text Section */}
+      <div className="mb-8 md:mb-0">
+        <h2 className="text-2xl sm:text-3xl font-bold text-foreground industrial-heading mb-4 text-center md:text-left">
+          About Tuli Enterprise
+        </h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed text-justify ">
+          We specialize in manufacturing high-quality bolts designed specifically for bicycle parts. With a deep understanding of the cycling industry, we focus on producing durable, precise, and rust-resistant fasteners that ensure smooth and safe rides.
+        </p>
+        <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed text-justify ">
+          Tuli Enterprise is a trusted name in the world of bolt manufacturing. While we began our journey producing high-precision bolts for bicycle parts, we’ve now expanded to manufacture all types of bolts for various industries — automotive, machinery, construction, and more.
+        </p>
+      </div>
 
-                We specialize in manufacturing high-quality bolts designed specifically for bicycle parts. With a deep understanding of the cycling industry, we focus on producing durable, precise, and rust-resistant fasteners that ensure smooth and safe rides.
-              </p>
-              <p className="text-base text-muted-foreground mb-6 leading-relaxed text-justify">
-                Tuli Enterprise is a trusted name in the
-                world of bolt manufacturing. While webegan our journey producing high-precision bolts for bicycle parts, we’venow expanded to manufacture alltypes of bolts for various industries automotive, machinery, construction,and more.
-              </p>
-            </div>
+      {/* Image Section */}
+      <div className="flex justify-center">
+        <Card className="border-metallic-silver/10 shadow-sm w-full max-w-sm sm:max-w-md">
+          <img
+            src={About}
+            alt="Capabilities Snapshot"
+            className="w-full h-48 sm:h-64 md:h-72 object-cover rounded-lg shadow-md"
+          />
+        </Card>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
-            <div>
-              <Card className="  border-metallic-silver/10 shadow-sm  w-[450px]  mx-auto ">
-              <img src={About} alt="Capabilities Snapshot" className=" h-[300px]  object-cover rounded-lg shadow-md" />
-                
-              </Card>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* New Section: Featured Products */}
       <section className="py-16 bg-background">

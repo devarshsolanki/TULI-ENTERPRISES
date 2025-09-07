@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Call from '../components/CallButton'; // import the Call component
 import Whatsapp from '@/components/Whatsapp'; // import the WhatsApp component
+import { Link } from "react-router-dom";
 
 const WhyChooseUs = () => {
   const features = [
@@ -262,13 +263,17 @@ const WhyChooseUs = () => {
               Join thousands of satisfied customers who trust Tuli Enterprises for their critical applications. 
               Let us show you why quality matters.
             </p>
+        
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
+                asChild
                 size="lg"
-                onClick={() => window.location.href = '/contact'}
                 className="bg-industrial-blue hover:bg-industrial-blue/90 text-white px-8 py-3 text-lg shadow-glow hover:shadow-lg transition-all duration-300"
               >
-                 Contact Our Team
+                <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                  Contact Our Team
+                </Link>
               </Button>
               {/* <Button 
                 variant="outline" 
