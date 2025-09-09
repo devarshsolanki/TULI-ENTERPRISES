@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter } from 'lucide-react';
@@ -55,7 +55,7 @@ const Products = () => {
     {
       id: 4,
       name: 'PartsAllen Bolt (L-Key Bolt)',
-      categories: ['Industrial'],
+      categories: ['Industrial','Cycle Parts'],
       image: p4,
       description: 'Socket Head Cap Bolt Offers High Strength and is commonly used in machine parts, tools, clutches etc. where space is limited.',
       sizes: ['M6', 'M8', 'M10', 'M12', 'M16'],
@@ -73,7 +73,7 @@ const Products = () => {
     {
       id: 6,
       name: 'Carriage bolt (3/4",1")',
-      categories: ['Custom'],
+      categories: ['Cycle Parts','Custom'],
       image: p6,
       description: 'Carrlage bolt with a smooth round head and square neck. Avallable in many sizes.',
       sizes: ['Custom Sizes Available'],
@@ -82,7 +82,7 @@ const Products = () => {
     {
       id: 7,
       name: 'Pakha Bolt',
-      categories: ['machinery'],
+      categories: ['machinery','Cycle Parts'],
       image: p7,
       description: 'A hex head bolt with partial threading and a cross-drilled hole near the threaded end, used in fans. Available in many sizes.',
       sizes: ['Custom Sizes Available'],
@@ -91,7 +91,7 @@ const Products = () => {
     {
       id: 8,
       name: 'Skrews',
-      categories: ['Custom'],
+      categories: ['Cycle Parts','Custom'],
       image: p8,
       description: 'Fully threaded with sharp points and wide, rounded heads featuring a single slot drive or double slot.',
       sizes: ['Custom Sizes Available'],
@@ -100,7 +100,7 @@ const Products = () => {
     {
       id: 9,
       name: '2 Soot Skrew',
-      categories: ['machinery'],
+      categories: ['machinery','Cycle Parts'],
       image: p9,
       description: 'Slotted round head machine screw : Fully threaded with a rounded top and a single slot drive. Available in many sizes',
       sizes: ['Custom Sizes Available'],
@@ -108,12 +108,15 @@ const Products = () => {
     }
   ];
 
-  const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'All' || (product.categories && product.categories.includes(selectedCategory));
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+ const filteredProducts = useMemo(() => {
+    const lowerCaseSearchTerm = searchTerm.toLowerCase().trim();
+    return products.filter(product => {
+      const matchesCategory = selectedCategory === 'All' || (product.categories && product.categories.includes(selectedCategory));
+      const matchesSearch = product.name.toLowerCase().includes(lowerCaseSearchTerm) ||
+        product.description.toLowerCase().includes(lowerCaseSearchTerm);
+      return matchesCategory && matchesSearch;
+    });
+  }, [products, selectedCategory, searchTerm]);
 
   return (
     <div className="">

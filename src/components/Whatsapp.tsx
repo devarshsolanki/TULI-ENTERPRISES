@@ -48,7 +48,7 @@ const WhatsAppButton = () => {
           }`}
           aria-hidden={!visible}
         >
-          Chat with Owner
+          Chat on WhatsApp
         </span>
       </div>
     </a>
