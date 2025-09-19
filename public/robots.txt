@@ -1,14 +1,12 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
+Allow: /
+
+# Sitemap for search engines
+Sitemap: https://tulienterprises.shop/sitemap.xml
+
+# Extra hints (not required but useful)
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: AdsBot-Google
 Allow: /

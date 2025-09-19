@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://tulienterprises.shop/</loc>
+    <lastmod>2025-09-19</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Example Product Pages -->
+  <url>
+    <loc>https://tulienterprises.shop/industries</loc>
+    <lastmod>2025-09-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tulienterprises.shop/products</loc>
+    <lastmod>2025-09-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tulienterprises.shop/WhyChooseUs</loc>
+    <lastmod>2025-09-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://tulienterprises.shop/contact</loc>
+    <lastmod>2025-09-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://tulienterprises.shop/about</loc>
+    <lastmod>2025-09-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

@@ -3,24 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tuli Enterprise</title>
-    <meta name="description" content="Leading manufacturer of precision fasteners, bolts, and industrial components. Serving bicycle, automotive, and heavy machinery industries with quality solutions since 1996." />
+    <title>Tuli Enterprise | Precision Fasteners & Bolts Manufacturer</title>
+
+    <!-- Primary Meta Tags -->
+    <meta
+      name="description"
+      content="Leading manufacturer of precision fasteners, bolts, and industrial components. Serving bicycle, automotive, and heavy machinery industries with quality solutions since 1986."
+    />
     <meta name="author" content="Tuli Enterprise" />
-    <meta name="keywords" content="fasteners, bolts, screws, cycle parts, industrial bolts, precision engineering, Tuli Enterprise, Punjab" />
+    <meta
+      name="keywords"
+      content="fasteners, bolts, screws, cycle parts, industrial bolts, precision engineering, Tuli Enterprise, Punjab, Ludhiana bolts"
+    />
+    <meta name="robots" content="index, follow" />
 
-    <meta property="og:title" content="Tuli Enterprise - Precision Fasteners Since 1996" />
-    <meta property="og:description" content="Leading manufacturer of precision fasteners, bolts, and industrial components. Quality solutions for bicycle, automotive, and machinery industries." />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tulienterprises.shop/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:title"
+      content="Tuli Enterprise - Precision Fasteners Since 1986"
+    />
+    <meta
+      property="og:description"
+      content="Since 1986, Tuli Enterprise manufactures high-quality bolts and cycle fasteners trusted by industries worldwide."
+    />
+    <meta
+      property="og:image"
+      content="https://tulienterprises.shop/src/assets/logo.jpg"
+    />
+    <meta property="og:url" content="https://tulienterprises.shop/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./src/assets/logo.jpg" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tulienterprise" />
-    <meta name="twitter:image" content="./src/assets/logo.jpg" />
+    <meta
+      name="twitter:title"
+      content="Tuli Enterprise - Precision Fasteners Since 1986"
+    />
+    <meta
+      name="twitter:description"
+      content="Premium bolts & fasteners for cycle, automotive, machinery & construction industries."
+    />
+    <meta
+      name="twitter:image"
+      content="https://tulienterprises.shop/src/assets/logo.jpg"
+    />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./src/assets/logo.jpg" />
+
+    <!--humans.txt -->
+    <link type="text/plain" rel="author" href="public/humans.txt" />
+
+    <!--sitemap.xml -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="public/sitemap.xml" />
+
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tuli Enterprises",
+  "url": "https://tulienterprises.shop",
+  "logo": "https://tulienterprises.shop/src/assets/logo.png",
+  "description": "Bolt & fastener manufacturer since 1986. Specializing in cycle, machinery, and industrial bolts.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jaspal Bangar Road, Industrial Area C, Dhandari Kalan",
+    "addressLocality": "Ludhiana",
+    "addressRegion": "Punjab",
+    "postalCode": "141006",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-9417488062",
+    "contactType": "customer service"
+  },
+  "sameAs": [
+    "https://www.facebook.com/bsfasteners",
+    "https://www.linkedin.com/company/bsfasteners"
+  ]
+}
+</script>
+
+    <!-- Example Product Schema (you can duplicate for each product) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Allen Bolt",
+  "image": "https://tulienterprises.shop/src/assets/logo.png",
+  "description": "High-strength Allen bolt for machinery and cycle parts.",
+  "brand": {
+    "@type": "Organization",
+    "name": "Tuli Enterprises"
+  }
+}
+</script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

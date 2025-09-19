@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: codex digital
+Company: Tuli Enterprises
+Location: Ludhiana, Punjab, India
+Founded: 1986
+
+/* TECHNOLOGY */
+Built with: React, Vite, TailwindCSS
+Hosting: Vercel
+
+/* CONTACT */
+Email: team.codexdigital@gmail.com
+Phone: +91-8866779476,8320241898
