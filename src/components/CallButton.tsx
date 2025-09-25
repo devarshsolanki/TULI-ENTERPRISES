@@ -14,7 +14,7 @@ const CallButton = () => {
 
   return (
     <a
-      href="tel:+917888828694"
+      href="tel:+91 9417488062"
       aria-label="Call Owner"
       className="fixed bottom-10 md:bottom-8 right-6 z-50"
     >
