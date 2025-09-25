@@ -36,7 +36,7 @@ const Products = () => {
     },
     {
       id: 2,
-      name: 'high-quality bolts',
+      name: 'Seat Piller bolt',
       categories: ['Cycle Parts'],
       image: p2,
       description: 'Round head bolt with nut and washer, commonly used in cycle seat. Also available in thin Threading',
@@ -54,7 +54,7 @@ const Products = () => {
     },
     {
       id: 4,
-      name: 'PartsAllen Bolt (L-Key Bolt)',
+      name: 'Allen Bolt (L-Key Bolt)',
       categories: ['Industrial','Cycle Parts'],
       image: p4,
       description: 'Socket Head Cap Bolt Offers High Strength and is commonly used in machine parts, tools, clutches etc. where space is limited.',
@@ -81,7 +81,7 @@ const Products = () => {
     },
     {
       id: 7,
-      name: 'Pakha Bolt',
+      name: 'Fan Bolt',
       categories: ['machinery','Cycle Parts'],
       image: p7,
       description: 'A hex head bolt with partial threading and a cross-drilled hole near the threaded end, used in fans. Available in many sizes.',
@@ -90,7 +90,7 @@ const Products = () => {
     },
     {
       id: 8,
-      name: 'Skrews',
+      name: 'Screws',
       categories: ['Cycle Parts','Custom'],
       image: p8,
       description: 'Fully threaded with sharp points and wide, rounded heads featuring a single slot drive or double slot.',
@@ -99,7 +99,7 @@ const Products = () => {
     },
     {
       id: 9,
-      name: '2 Soot Skrew',
+      name: '2 Soot Screw',
       categories: ['machinery','Cycle Parts'],
       image: p9,
       description: 'Slotted round head machine screw : Fully threaded with a rounded top and a single slot drive. Available in many sizes',
