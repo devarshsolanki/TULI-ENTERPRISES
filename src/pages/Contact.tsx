@@ -348,7 +348,7 @@ const Contact = () => {
                   </p>
                   <Button 
                     className="w-full bg-industrial-blue hover:bg-industrial-blue/90 text-white shadow-glow hover:shadow-lg transition-all duration-300 group"
-                    onClick={() => window.open('tel:+919876543210')}
+                    onClick={() => window.open('tel:+91 7888828694')}
                   >
                     <Phone className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                    
